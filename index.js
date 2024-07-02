@@ -18,7 +18,6 @@ puppeteer.launch({ headless: true }).then(async (browser) => {
   //     page.waitForNavigation(),
   //   ]);
 
-  await page.screenshot({ path: "jobs.png", fullPage: true });
 
   const names = await page.evaluate(() => {
     return Array.from(document.querySelectorAll("#nameList > li")).map(
